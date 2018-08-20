@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (strong) AVAudioPlayer *audioPlayer;
 
 @end
 

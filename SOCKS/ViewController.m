@@ -28,15 +28,27 @@ extern int socks_main(int argc, const char** argv);
         const char *argv[] = {"microsocks", "-p", portbuf, NULL};
 
         dispatch_async(dispatch_get_main_queue(), ^{
-            [[self statusLabel] setText:[NSString stringWithFormat:@"Running at %@:%d", [AppDelegate deviceIPAddress], port]];
+            [self.statusLabel setText:[NSString stringWithFormat:@"Running at %@:%d", [AppDelegate deviceIPAddress], port]];
         });
 
         int status = socks_main(3, argv);
 
         dispatch_async(dispatch_get_main_queue(), ^{
-            [[self statusLabel] setText:[NSString stringWithFormat:@"Failed to start: %d", status]];
+            [self.statusLabel setText:[NSString stringWithFormat:@"Failed to start: %d", status]];
         });
     });
+
+    /* Extremely hacky way to keep app running in the background.
+     This WILL get the app rejected from the App Store! */
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"blank" ofType:@"wav"]];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionMixWithOthers error:nil];
+    [[AVAudioSession sharedInstance] setActive:YES error:nil];
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self.audioPlayer setVolume:0.01];
+    [self.audioPlayer setNumberOfLoops:-1];
+    [self.audioPlayer prepareToPlay];
+    [self.audioPlayer play];
 }
 
 
