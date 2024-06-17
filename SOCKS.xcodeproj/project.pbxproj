@@ -13,7 +13,6 @@
 		7F1F272B212A29D600540E3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F1F272A212A29D600540E3A /* Assets.xcassets */; };
 		7F1F272E212A29D600540E3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1F272C212A29D600540E3A /* LaunchScreen.storyboard */; };
 		7F1F2731212A29D600540E3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1F2730212A29D600540E3A /* main.m */; };
-		7F4FA083212A2AD000F14A55 /* sblist_delete.c in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FA07F212A2AD000F14A55 /* sblist_delete.c */; };
 		7F4FA084212A2AD000F14A55 /* server.c in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FA080212A2AD000F14A55 /* server.c */; };
 		7F4FA085212A2AD000F14A55 /* sblist.c in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FA081212A2AD000F14A55 /* sblist.c */; };
 		7F4FA086212A2AD000F14A55 /* sockssrv.c in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FA082212A2AD000F14A55 /* sockssrv.c */; };
@@ -31,7 +30,6 @@
 		7F1F272D212A29D600540E3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F1F272F212A29D600540E3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F1F2730212A29D600540E3A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7F4FA07F212A2AD000F14A55 /* sblist_delete.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sblist_delete.c; path = microsocks/sblist_delete.c; sourceTree = SOURCE_ROOT; };
 		7F4FA080212A2AD000F14A55 /* server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = server.c; path = microsocks/server.c; sourceTree = SOURCE_ROOT; };
 		7F4FA081212A2AD000F14A55 /* sblist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sblist.c; path = microsocks/sblist.c; sourceTree = SOURCE_ROOT; };
 		7F4FA082212A2AD000F14A55 /* sockssrv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sockssrv.c; path = microsocks/sockssrv.c; sourceTree = SOURCE_ROOT; };
@@ -69,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				7FCF1EA2212B2C8C00B5D14D /* blank.wav */,
-				7F4FA07F212A2AD000F14A55 /* sblist_delete.c */,
 				7F4FA081212A2AD000F14A55 /* sblist.c */,
 				7F4FA080212A2AD000F14A55 /* server.c */,
 				7F4FA082212A2AD000F14A55 /* sockssrv.c */,
@@ -164,7 +161,6 @@
 				7F4FA086212A2AD000F14A55 /* sockssrv.c in Sources */,
 				7F4FA084212A2AD000F14A55 /* server.c in Sources */,
 				7F4FA085212A2AD000F14A55 /* sblist.c in Sources */,
-				7F4FA083212A2AD000F14A55 /* sblist_delete.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +298,7 @@
 				DEVELOPMENT_TEAM = WU7S2576LJ;
 				INFOPLIST_FILE = SOCKS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ca.robertxiao.SOCKS;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.robertxiao.socks-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,7 +312,7 @@
 				DEVELOPMENT_TEAM = WU7S2576LJ;
 				INFOPLIST_FILE = SOCKS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ca.robertxiao.SOCKS;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.robertxiao.socks-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
